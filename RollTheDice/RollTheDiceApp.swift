@@ -12,6 +12,9 @@ struct RollTheDiceApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
+            // Experiments
+            //DeviceMotion()
         }
     }
 }

@@ -5,6 +5,14 @@
 //  Created by Thomas Schatton on 14.06.22.
 //
 
+/*
+ To test DeviceMotion on your device
+ go to RollTheDiceApp.Swift
+ comment ContentView()
+ uncomment DeviceMotion()
+*/
+
+
 import CoreMotion
 import SwiftUI
 
@@ -16,7 +24,7 @@ struct AccelerationData: Identifiable {
     static let examle = AccelerationData(timestamp: .now, rawData: CMAcceleration(x: Double.random(in: -2.0...2.0), y: Double.random(in: -2.0...2.0), z: Double.random(in: -2.0...2.0)))
 }
 
-struct TestingAccelerometer: View {
+struct DeviceMotion: View {
     let motion = CMMotionManager()
     
     @State private var loggedData = [AccelerationData]()
@@ -176,6 +184,6 @@ struct TestingAccelerometer: View {
 
 struct TestingAccelerometer_Previews: PreviewProvider {
     static var previews: some View {
-        TestingAccelerometer()
+        DeviceMotion()
     }
 }
